@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OrxKunenaToFlarum.DTOs.Kunena
 {
-    class Searches
+    public class Search
     {
-        string search_term;
-        int hits;
+        public virtual string search_term { get; set; }
+        public virtual int hits { get; set; }
     }
 }

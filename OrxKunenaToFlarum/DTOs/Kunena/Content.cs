@@ -21,6 +21,7 @@ namespace OrxKunenaToFlarum.DTOs.Kunena
         public virtual int sectionid { get; set; }
         public virtual int mask { get; set; }
         public virtual int catid { get; set; }
+        //public virtual Category category {get; set; }
         public virtual DateTime created { get; set; }
         public virtual int created_by { get; set; }
         public virtual string created_by_alias { get; set; }

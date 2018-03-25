@@ -7,34 +7,34 @@ using System.Threading.Tasks;
 
 namespace OrxKunenaToFlarum.DTOs.Kunena
 {
-    class UserProfile
+    public class UserProfile
     {
-        int userid;
-        string view; // varchar(8) NOT NULL DEFAULT 'flat',
-        string signature;
-        int moderator;
-        int ordering;
-        int posts;
-        string avatar;
-        int karma;
-        int karma_time;
-        int group_id;
-        int uhits;
-        string personalText;
-        int gender;
-        DateTime birthdate;
-        string location;
-        string ICQ;
-        string AIM;
-        string YIM;
-        string MSN;
-        string SKYPE;
-        string GTAL;
-        string websitename;
-        string websiteurl;
-        int rank;
-        int hideEmail;
-        int showOnline;
+        public virtual int userid { get; set; }
+        public virtual string view { get; set; }
+        public virtual string signature { get; set; }
+        public virtual int moderator { get; set; }
+        public virtual int ordering { get; set; }
+        public virtual int posts { get; set; }
+        public virtual string avatar { get; set; }
+        public virtual int karma { get; set; }
+        public virtual int karma_time { get; set; }
+        public virtual int group_id { get; set; }
+        public virtual int uhits { get; set; }
+        public virtual string personalText { get; set; }
+        public virtual int gender { get; set; }
+        public virtual DateTime birthdate { get; set; }
+        public virtual string location { get; set; }
+        public virtual string ICQ { get; set; }
+        public virtual string AIM { get; set; }
+        public virtual string YIM { get; set; }
+        public virtual string MSN { get; set; }
+        public virtual string SKYPE { get; set; }
+        public virtual string GTALK { get; set; }
+        public virtual string websitename { get; set; }
+        public virtual string websiteurl { get; set; }
+        public virtual int rank { get; set; }
+        public virtual int hideEmail { get; set; }
+        public virtual int showOnline { get; set; }
     }
 }
 

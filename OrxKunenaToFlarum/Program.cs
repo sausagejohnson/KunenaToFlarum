@@ -16,7 +16,11 @@ namespace OrxKunenaToFlarum
             //repo.GetAllCategories();
             //repo.GetAllContent();
             //repo.GetAllAttachments();
-            repo.GetAllUsers();
+            //repo.GetAllUsers();
+            repo.GetAllUserProfiles();
+            //repo.GetAllMessages();
+            //repo.GetAllMessageTexts();
+            //repo.GetAllSearches();
         }
     }
 }

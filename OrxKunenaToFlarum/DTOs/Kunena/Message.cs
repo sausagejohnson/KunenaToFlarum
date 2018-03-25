@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace OrxKunenaToFlarum.DTOs.Kunena
 {
-    class Message
+    public class Message
     {
-        int id;
-        int parent;
-        int thread;
-        int catid;
-        string name;
-        int userid;
-        string email;
-        string subject;
-        int time;
-        string ip;
-        int topic_emoticon;
-        int locked;
-        int hold;
-        int ordering;
-        int hits;
-        int moved;
-        int modified_by;
-        int modified_time;
-        string modified_reason;
+        public virtual int id { get; set; }
+        public virtual int parent { get; set; }
+        public virtual int thread { get; set; }
+        public virtual int catid { get; set; }
+        public virtual string name { get; set; }
+        public virtual int userid { get; set; }
+        public virtual string email { get; set; }
+        public virtual string subject { get; set; }
+        public virtual int time { get; set; }
+        public virtual string ip { get; set; }
+        public virtual int topic_emoticon { get; set; }
+        public virtual int locked { get; set; }
+        public virtual int hold { get; set; }
+        public virtual int ordering { get; set; }
+        public virtual int hits { get; set; }
+        public virtual int moved { get; set; }
+        public virtual int modified_by { get; set; }
+        public virtual int modified_time { get; set; }
+        public virtual string modified_reason { get; set; }
     }
 }
 

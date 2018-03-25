@@ -9,6 +9,7 @@ using FluentNHibernate.Cfg.Db;
 using System.Reflection;
 using FluentNHibernate.Cfg;
 using OrxKunenaToFlarum.Repository.ClassMaps;
+using FluentNHibernate.Automapping;
 
 namespace OrxKunenaToFlarum.Repository
 {
@@ -21,6 +22,9 @@ namespace OrxKunenaToFlarum.Repository
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["kunenaForum"].ConnectionString;
 
+            AutomappingConfiguration autoConfig = new AutomappingConfiguration();
+            TableNameConvention tableNameConvention = new TableNameConvention();
+
             FluentConfiguration config =
             FluentNHibernate.Cfg.Fluently.Configure().Database(
                     MySQLConfiguration.Standard
@@ -30,7 +34,12 @@ namespace OrxKunenaToFlarum.Repository
                     m.FluentMappings.Add<CategoryClassMap>(); //( //.AddFromAssembly(classMapAssembly);
                     m.FluentMappings.Add<ContentClassMap>(); 
                     m.FluentMappings.Add<AttachmentClassMap>(); 
-                    m.FluentMappings.Add<UserClassMap>(); 
+                    m.FluentMappings.Add<UserClassMap>();
+                    m.FluentMappings.Add<SearchClassMap>();
+                    m.AutoMappings.Add(
+                        //AutoMap.AssemblyOf<BaseRepository>(autoConfig).Conventions.Add<TableNameConvention>(tableNameConvention)
+                        AutoMap.Assembly(Assembly.GetExecutingAssembly(), autoConfig).Conventions.Add<TableNameConvention>(tableNameConvention)
+                    );
                 }
             );
 

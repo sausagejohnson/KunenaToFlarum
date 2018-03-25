@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace OrxKunenaToFlarum.DTOs.Kunena
 {
-    class MessageText
+    public class MessageText
     {
-        int mesid;
-        string message;
+        public virtual int mesid { get; set; }
+        public virtual string message { get; set; }
     }
 }
 

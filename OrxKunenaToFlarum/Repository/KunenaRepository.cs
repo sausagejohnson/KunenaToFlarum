@@ -56,5 +56,42 @@ namespace OrxKunenaToFlarum.Repository
 
             return users;
         }
+
+        public IEnumerable<Message> GetAllMessages()
+        {
+            List<Message> messages = new List<Message>();
+            ICriteria crit = Session.CreateCriteria<Message>();
+            messages = crit.List<Message>().ToList();
+
+            return messages;
+        }
+
+        public IEnumerable<MessageText> GetAllMessageTexts()
+        {
+            List<MessageText> messageTexts = new List<MessageText>();
+            ICriteria crit = Session.CreateCriteria<MessageText>();
+            messageTexts = crit.List<MessageText>().ToList();
+
+            return messageTexts;
+        }
+
+        public IEnumerable<Search> GetAllSearches()
+        {
+            List<Search> searches = new List<Search>();
+            ICriteria crit = Session.CreateCriteria<Search>();
+            searches = crit.List<Search>().ToList();
+
+            return searches;
+        }
+
+        public IEnumerable<UserProfile> GetAllUserProfiles()
+        {
+            List<UserProfile> userProfiles = new List<UserProfile>();
+            ICriteria crit = Session.CreateCriteria<UserProfile>();
+            userProfiles = crit.List<UserProfile>().ToList();
+
+            return userProfiles;
+        }
+
     }
 }
