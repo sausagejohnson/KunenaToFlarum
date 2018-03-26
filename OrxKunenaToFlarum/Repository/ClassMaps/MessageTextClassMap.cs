@@ -12,7 +12,10 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
     {
         public MessageTextClassMap()
         {
-            this.Schema("`orxproje_cms`");
+            this.Schema("`orx-forum`");
+            this.Table("jos_fb_messages_text");
+            this.Id(m => m.mesid);
+            this.Map(m => m.message).Column("message");
         }
     }
 }

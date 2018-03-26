@@ -6,6 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate;
 
+/**
+ * File not being used. Moving back to manual config.
+ */
+
 namespace OrxKunenaToFlarum.Repository
 {
     class AutomappingConfiguration : DefaultAutomappingConfiguration

@@ -11,7 +11,7 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
     public class CategoryClassMap : ClassMap<Category>
     {
         public CategoryClassMap(){
-            this.Schema("`orxproje_cms`");
+            this.Schema("`orx-forum`");
             this.Table("jos_fb_categories");
             this.Id(m => m.id);
             this.Map(m => m.parent).Column("parent");

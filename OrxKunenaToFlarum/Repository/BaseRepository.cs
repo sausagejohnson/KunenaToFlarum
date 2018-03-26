@@ -35,11 +35,14 @@ namespace OrxKunenaToFlarum.Repository
                     m.FluentMappings.Add<ContentClassMap>(); 
                     m.FluentMappings.Add<AttachmentClassMap>(); 
                     m.FluentMappings.Add<UserClassMap>();
+                    m.FluentMappings.Add<UserProfileClassMap>();
                     m.FluentMappings.Add<SearchClassMap>();
-                    m.AutoMappings.Add(
-                        //AutoMap.AssemblyOf<BaseRepository>(autoConfig).Conventions.Add<TableNameConvention>(tableNameConvention)
-                        AutoMap.Assembly(Assembly.GetExecutingAssembly(), autoConfig).Conventions.Add<TableNameConvention>(tableNameConvention)
-                    );
+                    m.FluentMappings.Add<MessageClassMap>();
+                    m.FluentMappings.Add<MessageTextClassMap>();
+                    //m.AutoMappings.Add(
+                    //    //AutoMap.AssemblyOf<BaseRepository>(autoConfig).Conventions.Add<TableNameConvention>(tableNameConvention)
+                    //    AutoMap.Assembly(Assembly.GetExecutingAssembly(), autoConfig).Conventions.Add<TableNameConvention>(tableNameConvention)
+                    //);
                 }
             );
 

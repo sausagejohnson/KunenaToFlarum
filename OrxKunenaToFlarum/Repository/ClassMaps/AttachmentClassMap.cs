@@ -12,7 +12,7 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
     {
         public AttachmentClassMap()
         {
-            this.Schema("`orxproje_cms`");
+            this.Schema("`orx-forum`");
             this.Table("jos_fb_attachments");
             this.Id(m => m.mesid);
             this.Map(m => m.filelocation).Column("filelocation");

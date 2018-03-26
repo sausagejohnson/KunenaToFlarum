@@ -52,7 +52,7 @@ namespace OrxKunenaToFlarum.Repository
         {
             List<User> users = new List<User>();
             ICriteria crit = Session.CreateCriteria<User>();
-            users = crit.List<User>().ToList();
+            users = crit.List<User>().Where(m=>m.value == 473).ToList();
 
             return users;
         }

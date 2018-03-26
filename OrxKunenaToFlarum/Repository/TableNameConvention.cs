@@ -6,6 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentNHibernate.Conventions.Instances;
 
+/**
+ * File not being used. Moving back to manual config.
+ */
+
 namespace OrxKunenaToFlarum.Repository
 {
     public class TableNameConvention : IClassConvention

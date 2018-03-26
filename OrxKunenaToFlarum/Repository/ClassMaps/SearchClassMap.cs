@@ -12,7 +12,8 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
     {
         public SearchClassMap()
         {
-            this.Schema("`orxproje_cms`");
+            this.ReadOnly();
+            this.Schema("`orx-forum`");
             this.Table("jos_core_log_searches");
             this.Id(m => m.search_term);
             this.Map(m => m.hits).Column("hits");

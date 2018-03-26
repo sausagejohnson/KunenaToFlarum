@@ -89,6 +89,7 @@
     <Compile Include="Repository\ClassMaps\SearchClassMap.cs" />
     <Compile Include="Repository\ClassMaps\UserClassMap.cs" />
     <Compile Include="Repository\ClassMaps\AttachmentClassMap.cs" />
+    <Compile Include="Repository\ClassMaps\UserProfileClassMap.cs" />
     <Compile Include="Repository\KunenaRepository.cs" />
     <Compile Include="Repository\ClassMaps\CategoryClassMap.cs" />
     <Compile Include="Repository\ClassMaps\ContentClassMap.cs" />

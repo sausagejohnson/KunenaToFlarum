@@ -14,6 +14,7 @@ namespace OrxKunenaToFlarum.DTOs.Kunena
         public virtual int catid { get; set; }
         public virtual string name { get; set; }
         public virtual int userid { get; set; }
+        public virtual User user { get; set; }
         public virtual string email { get; set; }
         public virtual string subject { get; set; }
         public virtual int time { get; set; }
@@ -27,6 +28,7 @@ namespace OrxKunenaToFlarum.DTOs.Kunena
         public virtual int modified_by { get; set; }
         public virtual int modified_time { get; set; }
         public virtual string modified_reason { get; set; }
+        public virtual MessageText messageText { get; set; }
     }
 }
 

@@ -12,7 +12,7 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
     {
         public ContentClassMap()
         {
-            this.Schema("`orxproje_cms`");
+            this.Schema("`orx-forum`");
             this.Table("jos_content");
             this.Id(m => m.id);
             this.Map(m => m.title).Column("title");

@@ -12,13 +12,14 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
     {
         public UserClassMap()
         {
-            this.Schema("`orxproje_cms`");
+            this.Schema("`orx-forum`");
             this.Table("jos_core_acl_aro");
             this.Id(m => m.id);
             this.Map(m => m.section_value).Column("section_value");
-            this.Map(m => m.value).Column("value");
+            this.Map(m => m.value).Column("value"); //this is the reference to the UserProfile ID
             this.Map(m => m.name).Column("name");
             this.Map(m => m.hidden).Column("hidden");
+            this.References(r => r.userProfile).Column("value").LazyLoad(Laziness.False).NotFound.Ignore(); //{"Unknown column 'this_.user_id' in 'field list'"}
         }
 
     }
