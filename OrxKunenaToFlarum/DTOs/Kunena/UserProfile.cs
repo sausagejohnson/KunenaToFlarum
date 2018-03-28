@@ -10,6 +10,7 @@ namespace OrxKunenaToFlarum.DTOs.Kunena
     public class UserProfile
     {
         public virtual int userid { get; set; }
+        public virtual User user { get; set; }
         public virtual string view { get; set; }
         public virtual string signature { get; set; }
         public virtual int moderator { get; set; }

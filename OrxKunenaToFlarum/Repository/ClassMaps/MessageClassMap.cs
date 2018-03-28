@@ -33,8 +33,8 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
             this.Map(m => m.modified_by).Column("modified_by");
             this.Map(m => m.modified_time).Column("modified_time");
             this.Map(m => m.modified_reason).Column("modified_reason");
-            this.References(r => r.user).Column("id").LazyLoad(Laziness.False).NotFound.Ignore(); // Hmm.... missing records here. Find them later.
-            this.References(r => r.messageText).Column("mesid").LazyLoad(Laziness.False).NotFound.Ignore(); // Test for missing records
+            this.References(r => r.userProfile).Column("userid").LazyLoad(Laziness.False).NotFound.Ignore(); // Hmm.... missing records here. Find them later.
+            this.References(r => r.messageText).Column("id").LazyLoad(Laziness.False).NotFound.Ignore(); // Test for missing records
         }
 
     }

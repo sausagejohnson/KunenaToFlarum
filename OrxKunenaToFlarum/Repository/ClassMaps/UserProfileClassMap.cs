@@ -40,6 +40,7 @@ namespace OrxKunenaToFlarum.Repository.ClassMaps
             this.Map(m => m.rank).Column("rank");
             this.Map(m => m.hideEmail).Column("hideEmail");
             this.Map(m => m.showOnline).Column("showOnline");
+            this.References(r => r.user).Column("userid").LazyLoad(Laziness.False).NotFound.Ignore(); // Hmm.... missing records here. Find them later.
         }
     }
 }

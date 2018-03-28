@@ -52,7 +52,16 @@ namespace OrxKunenaToFlarum.Repository
         {
             List<User> users = new List<User>();
             ICriteria crit = Session.CreateCriteria<User>();
-            users = crit.List<User>().Where(m=>m.value == 473).ToList();
+            users = crit.List<User>().Where(m=>m.id == 473).ToList();
+
+            return users;
+        }
+
+        public IEnumerable<User> GetAllUsersWithoutAProfile()
+        {
+            List<User> users = new List<User>();
+            ICriteria crit = Session.CreateCriteria<User>();
+            users = crit.List<User>().Where(m => m.userProfile == null).ToList();
 
             return users;
         }
@@ -62,6 +71,37 @@ namespace OrxKunenaToFlarum.Repository
             List<Message> messages = new List<Message>();
             ICriteria crit = Session.CreateCriteria<Message>();
             messages = crit.List<Message>().ToList();
+
+            return messages;
+        }
+
+        public IEnumerable<Message> GetAllMessagesWithoutAUserProfile()
+        {
+            List<Message> messages = new List<Message>();
+            ICriteria crit = Session.CreateCriteria<Message>();
+            messages = crit.List<Message>().Where(m=>m.userProfile == null).ToList();
+
+            return messages;
+        }
+
+        public IEnumerable<Message> GetAllMessagesWithoutMessageText()
+        {
+            List<Message> messages = new List<Message>();
+            ICriteria crit = Session.CreateCriteria<Message>();
+            messages = crit.List<Message>().Where(m => m.messageText == null).ToList();
+
+            return messages;
+        }
+
+        
+
+        public IEnumerable<Message> GetAllMessagesWithAUserProfileButWithoutAUser()
+        {
+            List<Message> messages = new List<Message>();
+            ICriteria crit = Session.CreateCriteria<Message>();
+            messages = crit.List<Message>().Where(m => m.userProfile.user == null).ToList();
+
+            messages.ForEach(m => Console.WriteLine("name: {0}, name: {1}", m.name, m.email));
 
             return messages;
         }
@@ -89,6 +129,24 @@ namespace OrxKunenaToFlarum.Repository
             List<UserProfile> userProfiles = new List<UserProfile>();
             ICriteria crit = Session.CreateCriteria<UserProfile>();
             userProfiles = crit.List<UserProfile>().ToList();
+
+            return userProfiles;
+        }
+
+        public IEnumerable<User> UserToTest()
+        {
+            List<User> users = new List<User>();
+            ICriteria crit = Session.CreateCriteria<User>();
+            users = crit.List<User>().Where(u=>u.id == 473).ToList();
+
+            return users;
+        }
+
+        public IEnumerable<UserProfile> UserProfileToTest()
+        {
+            List<UserProfile> userProfiles = new List<UserProfile>();
+            ICriteria crit = Session.CreateCriteria<UserProfile>();
+            userProfiles = crit.List<UserProfile>().Where(u=>u.userid == 473).ToList();
 
             return userProfiles;
         }
